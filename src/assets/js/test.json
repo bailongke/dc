@@ -1,0 +1,322 @@
+[
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC OP",
+        "fleetType": "战略/Strat Op",
+        "value": 1,
+        "shipType": "Jackdaw",
+        "time": "2023-09-05T04:19:31.176+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Capsule",
+        "time": "2023-09-04T04:36:43.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC Standing",
+        "fleetType": "值守/Standing",
+        "value": 0,
+        "shipType": "Capsule",
+        "time": "2023-09-03T04:46:53.829+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC CTA",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T07:46:57.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC CTA2",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T07:46:57.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-02T04:17:35.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "MOVE OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-01T05:37:40.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Pyrion Flax",
+        "characterId": 751405489,
+        "fleetName": "DC OP暴风",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-01T03:17:38.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC OP",
+        "fleetType": "战略/Strat Op",
+        "value": 1,
+        "shipType": "Jackdaw",
+        "time": "2023-09-05T04:19:31.176+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-04T04:36:30.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC Standing",
+        "fleetType": "值守/Standing",
+        "value": 0,
+        "shipType": "Malediction",
+        "time": "2023-09-03T04:46:53.829+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC CTA",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T09:15:01.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC CTA2",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T09:15:01.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-02T04:16:54.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "MOVE OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-01T05:37:47.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Fadek Windy",
+        "characterId": 2115325695,
+        "fleetName": "DC OP暴风",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-01T03:19:15.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC OP",
+        "fleetType": "战略/Strat Op",
+        "value": 1,
+        "shipType": "Jackdaw",
+        "time": "2023-09-05T04:19:31.176+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Capsule",
+        "time": "2023-09-04T04:36:38.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC Standing",
+        "fleetType": "值守/Standing",
+        "value": 0,
+        "shipType": "Occator",
+        "time": "2023-09-03T04:46:53.829+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC CTA",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T07:47:07.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC CTA2",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-02T07:47:07.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-02T04:16:56.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "MOVE OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Tempest Fleet Issue",
+        "time": "2023-09-01T05:37:58.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Dr3twa",
+        "characterId": 1629866259,
+        "fleetName": "DC OP暴风",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-01T03:18:37.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC OP",
+        "fleetType": "战略/Strat Op",
+        "value": 1,
+        "shipType": "Bifrost",
+        "time": "2023-09-05T04:19:31.176+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-04T04:36:46.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC Standing",
+        "fleetType": "值守/Standing",
+        "value": 0,
+        "shipType": "Capsule",
+        "time": "2023-09-03T04:46:53.829+00:00",
+        "system": "auth"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC CTA",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Damnation",
+        "time": "2023-09-02T07:47:01.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC CTA2",
+        "fleetType": "2.0 PAP",
+        "value": 2.00,
+        "shipType": "Damnation",
+        "time": "2023-09-02T07:47:01.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-02T04:17:30.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "MOVE OP",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Damnation",
+        "time": "2023-09-01T05:37:37.000+00:00",
+        "system": "seat"
+    },
+    {
+        "name": "Baba s Gandurasa",
+        "characterId": 93882790,
+        "fleetName": "DC OP暴风",
+        "fleetType": "1.0 PAP",
+        "value": 1.00,
+        "shipType": "Hurricane",
+        "time": "2023-09-01T03:17:32.000+00:00",
+        "system": "seat"
+    }
+]

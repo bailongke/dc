@@ -1,0 +1,151 @@
+/*公共样式*/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/* 版心 */
+.w {
+    width: 1600px;
+    margin: 0 auto;
+    
+}
+.style-red {
+    color: #c81623;
+}
+@font-face {
+    font-family: "iconfont"; /* Project id  */
+    src: url('../font/iconfont.ttf') format('truetype');
+  }
+.fr .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1px;
+    font-style: normal;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+.spacer {
+    width: 1px; 
+    height: 12px;
+    background-color: #666;
+    margin: 9px 12px 0;
+}
+/* 顶部快捷导航 */
+.header {
+    position: relative;
+    height: 150px;
+    background:url(../img/xk.gif)
+
+}
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    width: 175px;
+    height: 56px;
+    
+}
+.logo a {
+    display: block;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    background: url(https://images.evetech.net/corporations/98694642/logo?tenant=tranquility&size=128) no-repeat;
+    text-indent: -999px;
+}
+/* 欢迎标语 */
+.hy { 
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    text-align: center;
+    font-size: 40px;
+    color: aqua;
+}
+/* nav开始 */
+.nav {
+    position: absolute;
+    top: 150px;
+    height: 45px;
+    border-bottom: 4px solid #b1191a;
+}
+.gsjs {
+    width: 209px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+}
+.gsqt li {
+    float: left;
+}
+.gsqt li a {
+    display: block;
+    height: 45px;
+    padding: 0 25px;
+    line-height: 45px;
+    font-size: 16px;
+}
+/* 可视化页面的盒子边框样式 */
+ .panel {
+    position: relative;
+    height: 300px;
+    padding: 0 10px 25px;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    margin-bottom: 10px;
+
+  }
+ .panel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+  }
+.panel::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+  }
+ .panel .panel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+ .panel .panel-footer::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+  }
+.panel .panel-footer::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #02a6b5;
+    border-right: 2px solid #02a6b5;
+    content: "";
+  }
+  
