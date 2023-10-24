@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    data: require('../assets/js/test.json'),
+    bind:true,
   },
   getters: {
   },

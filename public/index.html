@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <title>联盟数据与个人数据展示</title>
+</head>
+
+<body>
+  <div class="shortcut">
+    <div class="w">
+      <div class="fl">
+        联盟数据与个人数据展示
+      </div>
+      <div class="fr" id="clock">
+      </div>
+      <script>
+        setInterval(function () {
+          realSysTime(clock), 1000
+        });
+        function realSysTime(clock) {
+          var now = new Date();            //创建Date对象
+          var year = now.getFullYear();    //获取年份
+          var month = now.getMonth();    //获取月份
+          var date = now.getDate();        //获取日期
+          var day = now.getDay();        //获取星期
+          var hour = now.getHours();    //获取小时
+          var minu = now.getMinutes();    //获取分钟s
+          var sec = now.getSeconds();    //获取秒钟
+          month = month + 1;
+          var arr_week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+          var week = arr_week[day];  //获取中文的星期
+          var time = year + "年" + month + "月" + date + "日 " + " " + ((hour < 10) ? ('0' + hour) : hour) + ":" + ((minu < 10) ? ('0' + minu) : minu) + ":" + ((sec < 10) ? ('0' + sec) : sec);    //组合系统时间
+          clock.innerHTML = time;    //显示系统时间
+        }
+      </script>
+    </div>
+  </div>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

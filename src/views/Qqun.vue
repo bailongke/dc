@@ -1,11 +1,14 @@
 <template>
     <div>
-        我是你爹
+        <Dcqq></Dcqq>
     </div>
 </template>
 
 <script>
+import Dcqq from '@/components/dcqq/Dcqq.vue'
+
 export default {
+  components: { Dcqq },
 
 }
 </script>

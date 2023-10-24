@@ -1,0 +1,54 @@
+/*公共样式*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 版心 */
+.w {
+    width: 1600px;
+    margin: 0 auto;
+
+}
+
+.style-red {
+    color: #c81623;
+}
+
+@font-face {
+    font-family: "iconfont";
+    /* Project id  */
+    src: url('../font/iconfont.ttf') format('truetype');
+}
+
+.fr .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1px;
+    font-style: normal;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 12px 0;
+}
+
+/* 顶部快捷导航 */
+.header {
+    position: relative;
+    height: 150px;
+
+}
+
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
