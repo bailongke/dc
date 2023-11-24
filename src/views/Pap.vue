@@ -5,14 +5,12 @@
 </template>
 
 <script>
-import Pap from '@/components/character/CharacterPap.vue'
+import Pap from '@/components/pap/CharacterPap.vue'
 export default {
-    components:{
-        Pap
-    }
+  components: {
+    Pap
+  }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

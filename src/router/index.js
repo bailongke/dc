@@ -20,9 +20,29 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/Pap.vue')
       },
       {
-        path: '/dcqq',
-        component: () => import(/* webpackChunkName: "about" */ '../views/Qqun.vue')
-      }
+        path: '/rankpap',
+        component: () => import(/* webpackChunkName: "about" */ '../views/paiPap.vue')
+      },
+      {
+        path: '/corporatepap',
+        component: () => import(/* webpackChunkName: "about" */ '../views/gsPap.vue')
+      },
+      {
+        path: '/alliancegs',
+        component: () => import(/* webpackChunkName: "about" */ '../views/alliancegs.vue')
+      },
+      {
+        path: '/alliancegsbind',
+        component: () => import(/* webpackChunkName: "about" */ '../views/CorporateBind.vue'),
+      },
+      {
+        path: '/seat',
+        component: () => import(/* webpackChunkName: "about" */ '../views/gsSeat.vue')
+      },
+      {
+        path: '/dcpap',
+        component: () => import(/* webpackChunkName: "about" */ '../views/dcPap.vue')
+      },
     ]
   },
 ]

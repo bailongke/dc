@@ -12,23 +12,31 @@
       </div>
     </div>
     <div class="bar">
-      <!-- 军团相关 -->
-      <div class="dc fl" @click="eve_switch_pap()" v-bind:class="{ bgc: clickli === 0 }">
-        pap详情
-      </div>
-      <!-- 军团其他内容 -->
-      <div class="dcqt fr">
+      <div class="dc">
         <ul>
-          <li><a href="#" @click="eve_switch_papph()" v-bind:class="{ bgc: clickli === 1 }">pap排行</a>
+          <li>
+            <a href="#" @click="eve_switch_pap()" v-bind:class="{ bgc: clickli === 0 }">PAP个人详情</a>
           </li>
-          <li><a href="#" @click="eve_switch_gspap()" v-bind:class="{ bgc: clickli === 2 }">公司pap排行</a></li>
-          <li><a href="#" @click="eve_switch_dcsj()" v-bind:class="{ bgc: clickli === 3 }">联盟数据可视化</a>
+          <li>
+            <a href="#" @click="eve_switch_papph()" v-bind:class="{ bgc: clickli === 1 }">PAP个人排行</a>
           </li>
-          <li><a href="#" @click="eve_switch_dcss()" v-bind:class="{ bgc: clickli === 4 }">联盟税收</a></li>
-          <li><a href="#" @click="eve_switch_dcqq()" v-bind:class="{ bgc: clickli === 5 }">联盟qq群</a></li>
+          <li>
+            <a href="#" @click="eve_switch_gspap()" v-bind:class="{ bgc: clickli === 2 }">公司内部PAP排行</a>
+          </li>
+          <li>
+            <a href="#" @click="eve_switch_dcgspap()" v-bind:class="{ bgc: clickli === 5 }"
+              v-show="this.$store.state.admin == true">DC联盟公司PAP平均排行</a>
+          </li>
+          <li>
+            <a href="#" @click="eve_switch_gsqqzhucu()" v-bind:class="{ bgc: clickli === 3 }"
+              v-show="this.$store.state.admin == true">DC各公司详情</a>
+          </li>
+          <li>
+            <a href="#" @click="eve_switch_gsseat()" v-bind:class="{ bgc: clickli === 4 }"
+              v-show="this.$store.state.admin == true">公司seat注册情况</a>
+          </li>
         </ul>
       </div>
-
     </div>
     <!-- //主体 -->
     <div class="main">
@@ -138,6 +146,9 @@ export default {
         name: [{ required: true, message: '请输入昵称', trigger: 'blur' },]
       },
       clickli: 0,
+      //判断是否为管理
+      adminid: [],
+      adminarr: [],
       //get接口活动的表单
       qqForm: {},
       cookie: '',
@@ -152,18 +163,21 @@ export default {
       this.$router.push('/')
     },
     async getQQ() {
-      this.getCookie();
+      this.token = sessionStorage.getItem("token");
       const { data: res } = await this.$http({
         method: 'get',
         url: 'https://tools.dc-eve.com/qq/bind',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': this.cookie,
+          'Authorization': sessionStorage.getItem("token"),
         },
-      })
+      }).catch(err => err)
       this.qqForm = res.data;
+      this.$store.state.form = this.qqForm
+
       this.form.character = this.qqForm.characterName
-      console.log(this.qqForm);
+
+      this.getadmin();
       if (res.data.qqNumber == 0) {
         this.$store.state.bind = true
       } else {
@@ -179,7 +193,6 @@ export default {
     },
     qqBind() {
       this.$refs.formRef.validate(async (validate) => {
-        this.getCookie();
         this.qqForm.nickName = this.form.name;
         this.qqForm.qqNumber = this.form.qq;
         if (validate) {
@@ -188,11 +201,11 @@ export default {
             url: 'https://tools.dc-eve.com/qq/bind',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': this.cookie,
+              'Authorization': sessionStorage.getItem("token"),
             },
             data: this.qqForm
           })
-          console.log(res);
+
           this.$store.state.bind = false;
           alert(res.message);
           this.dialogVisible = false;
@@ -214,18 +227,17 @@ export default {
       this.$refs.xformRef.validate(async (validate) => {
         this.qqForm.nickName = this.xform.nickName;
         this.qqForm.qqNumber = this.xform.qqNumber;
-        this.getCookie();
         if (validate) {
           const { data: res } = await this.$http({
             method: 'post',
             url: 'https://tools.dc-eve.com/qq/bind',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': this.cookie,
+              'Authorization': sessionStorage.getItem("token"),
             },
             data: this.qqForm
           })
-          console.log(res);
+
           this.getQQ();
           alert(res.message);
           this.xdialogVisible = false;
@@ -243,45 +255,82 @@ export default {
     },
     eve_switch_papph() {
       this.clickli = 1;
-      this.$router.push('/');
+      this.$router.push('/rankpap');
     },
-    async eve_switch_gspap() {
+    eve_switch_gspap() {
       this.clickli = 2;
+      this.$router.push('/corporatepap');
     },
-    eve_switch_dcsj() {
+    eve_switch_gsqqzhucu() {
       this.clickli = 3;
-      this.getQQ()
+      this.$router.push('/alliancegs')
+
     },
-    eve_switch_dcss() {
+    eve_switch_gsseat() {
       this.clickli = 4;
+      this.$router.push('/seat')
 
       //  this.getCookie();
 
     },
-    eve_switch_dcqq() {
+    eve_switch_dcgspap() {
       this.clickli = 5;
-      this.$router.push('/dcqq');
+      this.$router.push('/dcpap');
     },
     getCookie() {
-
-      this.arr = document.cookie.split(";")
+      this.arr = document.cookie.split("; ")
       for (var i = 0; i < this.arr.length; i++) {
         var arr1 = this.arr[i].split("=")     //将名/值对以“=”分割开
         if (arr1[0] == "tools_remember") {
           this.result = arr1[1];  //如果名为name,则结果result为名对应的值
         }
       }
-
       this.cookie = this.bar.concat(" ", this.result);
+      sessionStorage.setItem('token', this.cookie);
       if (this.cookie.length < 8) {
         window.location.replace("https://seat.dc-eve.com")
       }
+    },
+    //判断是不是管理
+    async getadmin() {
+      const { data: res } = await this.$http({
+        method: 'get',
+        url: 'https://tools.dc-eve.com/report/esi/corp',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': sessionStorage.getItem("token"),
+        },
+        params: {
+          corpId: this.qqForm.corpId,
+          month: 10,
+          page: 1,
+          size: 10,
+          year: 2023,
+        }
 
+      }).catch(err => err)
+      this.adminarr = res.data
+      console.log(this.adminarr);
+      if (this.adminarr == null || this.adminarr.length == 0) {
+        this.$store.state.admin = false
+        // console.log(this.$store.state.admin);
+      } else {
+        this.$store.state.admin = true
+        // console.log(this.$store.state.admin);
+      }
     }
 
   },
-  mounted() {
+  created() {
+    this.getCookie();
+
+  },
+  beforeMount() {
     this.getQQ();
+  },
+  mounted() {
+
+    this.getadmin();
   },
 
 
@@ -363,23 +412,31 @@ export default {
     border-bottom: 4px solid #b1191a;
 
     .dc {
-      width: 209px;
+
       height: 45px;
       font-size: 16px;
       line-height: 45px;
       text-align: center;
-    }
 
-    li {
-      float: left;
+      ul {
+        width: 100%;
 
-      a {
-        display: block;
-        height: 45px;
-        padding: 0 25px;
-        line-height: 45px;
-        font-size: 16px;
+        li {
+          float: left;
+
+
+          a {
+            display: block;
+            height: 45px;
+            padding: 0 25px;
+            line-height: 45px;
+            font-size: 16px;
+
+          }
+        }
       }
+
+
     }
 
     .bgc {
